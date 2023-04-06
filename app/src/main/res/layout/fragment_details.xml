@@ -3,22 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="item"
+            type="com.abdosharaf.marsrealestate.network.MarsItem" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/_16dp"
-        tools:context=".DetailsFragment">
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingEnd="@dimen/_16dp"
+        tools:context=".detailsScreen.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setImage="@{item.img_src}"
+            tools:srcCompat="@drawable/mars" />
 
         <TextView
+            android:id="@+id/tvType"
+            style="@style/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Details Screen"
-            android:textColor="@color/black"
-            android:textSize="24sp"
+            android:layout_marginTop="@dimen/_32dp"
+            app:getType="@{item}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/ivImage"
+            tools:text="For sale" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:getPrice="@{item}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvType"
+            tools:text="$455456" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            style="@style/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

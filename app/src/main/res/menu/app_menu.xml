@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/miRent"
+        android:title="@string/rent"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/miSale"
+        android:title="@string/buy"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/miShowAll"
+        android:title="@string/show_all"
+        app:showAsAction="never" />
+</menu>

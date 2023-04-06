@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Mars Real Estate</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_icon">App icon</string>
+    <string name="show_all">Show all</string>
+    <string name="buy">Buy</string>
+    <string name="rent">Rent</string>
+    <string name="sale">Sale</string>
+    <string name="display_type">For %s</string>
+    <string name="display_price_monthly_rental">$%,.0f/month</string>
+    <string name="display_price">$%,.0f</string>
+    <string name="back">Back</string>
+    <string name="image">Image</string>
+    <string name="status_image">Status image</string>
 </resources>
